@@ -1,6 +1,4 @@
-import {
-  USER_ROLE
-} from "./constants/session";
+const constants = require('./constants');
 
 const sessionManager = {
   /**
@@ -10,8 +8,8 @@ const sessionManager = {
    */
   signInSuccess(session) {
     session.start();
-    session.set(USER_ROLE.AUTHORIZED, true);
-    session.set(USER_ROLE.NOT_AUTHORIZED, false);
+    session.set(constants.USER_ROLE.AUTHORIZED, true);
+    session.set(constants.USER_ROLE.NOT_AUTHORIZED, false);
   },
   /**
    * Function that checks if a user is authenticated
@@ -19,7 +17,7 @@ const sessionManager = {
    * @param {Object} session 
    */
   isUserAuthenticated (session) {
-    return session && session.exists() && session.get(USER_ROLE.AUTHORIZED) && !session.get(USER_ROLE.NOT_AUTHORIZED);
+    return session && session.exists() && session.get(constants.USER_ROLE.AUTHORIZED) && !session.get(constants.USER_ROLE.NOT_AUTHORIZED);
   },
   /**
    * Function ending a session
@@ -35,8 +33,8 @@ const sessionManager = {
    * @param {Object} session 
    */
   markAsUnauthorized(session) {
-    session.set(USER_ROLE.NOT_AUTHORIZED, true);
+    session.set(constants.USER_ROLE.NOT_AUTHORIZED, true);
   }
 };
 
-export default sessionManager;
+exports.sessionManager = sessionManager;

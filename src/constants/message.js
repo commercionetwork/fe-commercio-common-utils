@@ -1,14 +1,14 @@
 /**
  * Message type
  */
-export const MESSAGE_TYPE = {
+const MESSAGE_TYPE = {
   ERROR: "danger",
   SUCCESS: "success"
 };
 /**
  * Responses key
  */
-export const RESPONSES_KEY = {
+const RESPONSES_KEY = {
   E_BAD_REQUEST: "E_BAD_REQUEST",
   E_BAD_REQUEST_BODY: "E_BAD_REQUEST_BODY",
   E_CANNOT_ACCESS_SERVICE: "E_CANNOT_ACCESS_SERVICE",
@@ -33,3 +33,6 @@ export const RESPONSES_KEY = {
   OK_USER_CONFIRMED: "OK_USER_CONFIRMED",
   OK_USER_CREATED: "OK_USER_CREATED"
 };
+
+exports.MESSAGE_TYPE = MESSAGE_TYPE;
+exports.RESPONSES_KEY = RESPONSES_KEY;
