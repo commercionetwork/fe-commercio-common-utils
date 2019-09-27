@@ -1,9 +1,6 @@
-// import {
-//   MESSAGE_TYPE, RESPONSES_KEY
-// } from "./constants/message";
-
-const constants = require('./constants');
-// const RESPONSES_KEY = require('./constants/index');
+import {
+  MESSAGE_TYPE, RESPONSES_KEY
+} from "./constants/message";
 
 const messageManager = {
   /**
@@ -16,7 +13,7 @@ const messageManager = {
     return {
       code,
       data,
-      type: constants.MESSAGE_TYPE.ERROR
+      type: MESSAGE_TYPE.ERROR
     }
   },
   /**
@@ -29,7 +26,7 @@ const messageManager = {
     return {
       code,
       data,
-      type: constants.MESSAGE_TYPE.SUCCESS
+      type: MESSAGE_TYPE.SUCCESS
     }
   },
   /**
@@ -38,11 +35,11 @@ const messageManager = {
    * @param {Message} message 
    */
   getCode(message) {
-    let code = (message.type === constants.MESSAGE_TYPE.ERROR)
-      ? constants.RESPONSES_KEY.E_DEFAULT
-      : constants.RESPONSES_KEY.OK_DEFAULT;
-    
-    if (message.code in constants.RESPONSES_KEY) {
+    let code = (message.type === MESSAGE_TYPE.ERROR)
+      ? RESPONSES_KEY.E_DEFAULT
+      : RESPONSES_KEY.OK_DEFAULT;
+
+    if (message.code in RESPONSES_KEY) {
       code = message.code;
     }
 
@@ -60,7 +57,7 @@ const messageManager = {
     let code = this.getCode(message);
     let translated = $t(code);
 
-    if (message.type === constants.MESSAGE_TYPE.ERROR && message.data) {
+    if (message.type === MESSAGE_TYPE.ERROR && message.data) {
       translated = `${translated} ${Object.values(message.data).join(' ')}`;
     }
 
@@ -68,4 +65,4 @@ const messageManager = {
   }
 };
 
-exports.messageManager = messageManager;
+export default messageManager;

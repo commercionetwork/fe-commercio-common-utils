@@ -1,4 +1,4 @@
-// import messageManager from './messageManager';
+import messageManager from './messageManager';
 import sessionManager from './sessionManager';
 
-export { sessionManager };
+export { messageManager, sessionManager };
