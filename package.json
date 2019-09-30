@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/commercionetwork/fe-commercio-common-utils#readme",
   "devDependencies": {
+    "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
     "@babel/node": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
