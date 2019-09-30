@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "prepare": "npm run build",
-    "test": "jest --verbose"
+    "test": "jest --colors"
   },
   "repository": {
     "type": "git",
