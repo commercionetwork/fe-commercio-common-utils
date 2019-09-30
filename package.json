@@ -1,10 +1,12 @@
 {
   "name": "@commercio.network/fe-commercio-common-utils",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Common utils shared between Commerc.io frontend projects",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir lib",
+    "prepare": "npm run build",
+    "test": "jest --colors"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,19 @@
   "bugs": {
     "url": "https://github.com/commercionetwork/fe-commercio-common-utils/issues"
   },
-  "homepage": "https://github.com/commercionetwork/fe-commercio-common-utils#readme"
+  "homepage": "https://github.com/commercionetwork/fe-commercio-common-utils#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@types/jest": "^24.0.18",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "<rootDir>/lib/"
+    ]
+  }
 }
