@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/commercionetwork/fe-commercio-common-utils/issues"
   },
-  "homepage": "https://github.com/commercionetwork/fe-commercio-common-utils#readme"
+  "homepage": "https://github.com/commercionetwork/fe-commercio-common-utils#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.3"
+  }
 }
