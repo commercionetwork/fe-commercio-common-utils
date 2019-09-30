@@ -1,3 +1,4 @@
+import AddressFormatter from './AddressFormatter';
 import messageManager from './messageManager';
 import sessionManager from './sessionManager';
 import {
@@ -10,6 +11,7 @@ import {
 export {
   RESPONSES_KEY,
   USER_ROLE,
+  AddressFormatter,
   messageManager,
   sessionManager
 };
