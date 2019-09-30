@@ -5,3 +5,17 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/commercionetwork/fe-commercio-common-utils.svg)
 
 A Javascript utilities library
+
+## How to test
+
+    npm run test
+
+## How to build and publish the library
+
+    # update the version number
+    npm run build
+    npm login
+    npm publish
+
+## Reference guide
+[How to publish a npm package](https://www.robinwieruch.de/publish-npm-package-node)
