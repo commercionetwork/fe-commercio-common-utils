@@ -5,7 +5,7 @@ import {
   USER_ROLE
 } from "../constants/session";
 
-describe("utils/sessionManager", () => {
+describe("sessionManager", () => {
   const session = {
     destroy: jest.fn(),
     exists: jest.fn(),

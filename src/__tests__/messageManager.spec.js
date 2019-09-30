@@ -6,7 +6,7 @@ import {
   RESPONSES_KEY
 } from "../constants/message";
 
-describe("utils/messageManager", () => {
+describe("messageManager", () => {
   it("Check if 'composeError' function returns the right object", () => {
     const code = "code";
     const data = {};
